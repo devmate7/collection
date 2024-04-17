@@ -1,0 +1,105 @@
+{
+	"editor.detectIndentation": false,
+	"editor.fontFamily": "monospace",
+	"editor.fontLigatures": true,
+	"editor.fontSize": 16,
+	"editor.formatOnPaste": true,
+	"editor.formatOnSave": true,
+	"editor.formatOnSaveMode": "file",
+	"editor.formatOnType": true,
+	"editor.indentSize": "tabSize",
+	"editor.insertSpaces": false,
+	"editor.lineHeight": 1.5,
+	"editor.linkedEditing": true,
+	"editor.quickSuggestions": {
+		"comments": "inline",
+		"other": "on",
+		"strings": "inline"
+	},
+	"editor.snippetSuggestions": "top",
+	"editor.suggestSelection": "recentlyUsed",
+	"editor.suggest.shareSuggestSelections": true,
+	"editor.suggest.showStatusBar": true,
+	"editor.tabSize": 4,
+	"editor.tokenColorCustomizations": {
+		"textMateRules": [
+			{
+				"scope": [
+					"entity.other.attribute-name.html",
+					"comment.line.double-slash.js",
+					"comment.line.number-sign.php",
+					"source.js constant",
+					"source.js support.constant",
+					"support.function.basic_functions.php",
+					"support.variable.property.importmeta.js",
+					"support.variable.property.target.js",
+					"variable.language.super.js",
+					"variable.language.this.js"
+				],
+				"settings": {
+					"fontStyle": "italic"
+				}
+			}
+		]
+	},
+	"editor.wordWrap": "bounded",
+	"editor.wordWrapColumn": 120,
+
+	"emmet.syntaxProfiles": {
+		"html": {
+			"self_closing_tag": true
+		}
+	},
+	"emmet.variables": {
+		"lang": "zh-hant-TW"
+	},
+
+	"files.autoSave": "onFocusChange",
+	"files.autoSaveWhenNoErrors": true,
+	"files.autoSaveWorkspaceFilesOnly": true,
+	"files.eol": "\n",
+	"files.insertFinalNewline": true,
+	"files.trimFinalNewlines": true,
+	"files.trimTrailingWhitespace": true,
+
+	"workbench.colorTheme": "GitHub Dark Default",
+	"workbench.iconTheme": "material-icon-theme",
+
+	// Language
+
+	"css.format.maxPreserveNewLines": 1,
+	"css.format.spaceAroundSelectorSeparator": true,
+
+	"html.format.maxPreserveNewLines": 1,
+	"html.format.templating": true,
+	"html.format.wrapAttributes": "force-expand-multiline",
+	"html.format.wrapLineLength": 0,
+
+	"javascript.preferences.quoteStyle": "single",
+
+	"json.format.keepLines": true,
+
+	"typescript.preferences.quoteStyle": "single",
+
+	"[css]": {
+		"editor.defaultFormatter": "vscode.css-language-features"
+	},
+
+	"[html]": {
+		"editor.defaultFormatter": "vscode.html-language-features"
+	},
+
+	"[javascript][typescript]": {
+		"editor.defaultFormatter": "vscode.typescript-language-features"
+	},
+
+	"[json][jsonc]": {
+		"editor.defaultFormatter": "vscode.json-language-features"
+	},
+
+	"[sql]": {
+		"editor.formatOnPaste": false,
+		"editor.formatOnSave": false,
+		"editor.formatOnType": false
+	}
+}
