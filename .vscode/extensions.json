@@ -1,15 +1,15 @@
 {
 	"recommendations": [
 		"bierner.color-info",
-		"pranaygp.vscode-css-peek",
 		"bierner.github-markdown-preview",
-		"eamodio.gitlens",
-		"oderwat.indent-rainbow",
-		"tyriar.luna-paint",
-		"pkief.material-icon-theme",
 		"christian-kohler.path-intellisense",
 		"devsense.phptools-vscode",
+		"eamodio.gitlens",
 		"esbenp.prettier-vscode",
-		"tonybaloney.vscode-pets"
+		"oderwat.indent-rainbow",
+		"pkief.material-icon-theme",
+		"pranaygp.vscode-css-peek",
+		"tonybaloney.vscode-pets",
+		"tyriar.luna-paint"
 	]
 }
