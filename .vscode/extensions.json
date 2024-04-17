@@ -1,0 +1,15 @@
+{
+	"recommendations": [
+		"bierner.color-info",
+		"bierner.github-markdown-preview",
+		"christian-kohler.path-intellisense",
+		"devsense.phptools-vscode",
+		"eamodio.gitlens",
+		"esbenp.prettier-vscode",
+		"oderwat.indent-rainbow",
+		"pkief.material-icon-theme",
+		"pranaygp.vscode-css-peek",
+		"tonybaloney.vscode-pets",
+		"tyriar.luna-paint"
+	]
+}
