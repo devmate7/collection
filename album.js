@@ -10,69 +10,6 @@ export async function address() {
 	);
 }
 
-/**
- * Compresses the stream of `blob`
- *
- * @arg {Blob} blob A `Blob` object to compress for
- * @returns Promise<Blob>
- */
-export async function compress(blob) {
-	const cs = new CompressionStream('gzip');
-	const rs = blob.stream().pipeThrough(cs);
-
-	return await new Response(rs).blob();
-}
-
-/**
- * Decompresses the stream of `blob`
- *
- * @arg {Blob} blob A `Blob` object to decompress for
- * @returns Promise<Blob>
- */
-export async function decompress(blob) {
-	const ds = new DecompressionStream('gzip');
-	const rs = blob.stream().pipeThrough(ds);
-
-	return await new Response(rs).blob();
-}
-
-export async function isDeflate(blob) {
-	const hex = await hexadecimalize(blob);
-
-	return hex[0] === '78'
-		&& hex[1] === '9c'
-		|| hex[1] === '';
-}
-
-export async function isGzip(blob) {
-	const hex = await hexadecimalize(blob);
-
-	return hex[0] === '1f'
-		&& hex[1] === '8b';
-}
-
-export async function hexadecimalize(blob) {
-	const hex = '0123456789abcdef';
-
-	return Array.from(
-		new Uint8Array(await blob.arrayBuffer()),
-		x => hex[x >> 4] + hex[x & 15]
-	);
-}
-
-function random() {
-	return crypto.getRandomValues(new Uint8Array(1))[0];
-}
-
-function createToken(size) {
-	const hex = '0123456789abcdef';
-
-	return crypto.getRandomValues(new Uint8Array(size)).reduce(
-		(token, value) => token + hex[value >> 4] + hex[value & 15],
-		''
-	);
-}
-
 async function compress(text) {
 	const data = new TextEncoder().encode(text);
 	const stream = new CompressionStream('gzip');
@@ -118,58 +55,8 @@ export async function isArchivable(url) {
 	);
 }
 
-/**
- * Determines whether `value` is a decimal
- *
- * @arg {*} value Value to test
- * @returns boolean
- */
-export function isDecimal(value) {
-	return typeof value === 'number'
-		&& value % 1 !== 0;
-}
-
-/**
- * Determines whether `value` is an integer
- *
- * @arg {*} value Value to test
- * @returns boolean
- */
-export function isIngeter(value) {
-	return typeof value === 'bigint'
-		|| typeof value === 'number'
-		&& value % 1 === 0;
-}
-
-/**
- * Determines whether `value` is a number or a numeric string
- *
- * @arg {*} value Value to check
- * @returns boolean
- */
-export function isNumeric(value) {
-	return typeof value === 'bigint'
-		|| typeof value === 'number'
-		|| typeof value === 'string'
-		&& !isNaN(value);
-}
-
 export async function isIncognito() {
 	return await navigator.storage.persist();
-}
-
-/**
- * Determines whether given value is a valid URL
- *
- * @arg {string} value Value to test
- * @returns boolean
- */
-export function isValidURL(value) {
-	try {
-		return new URL(value, self.location.origin), true;
-	} catch (e) {
-		return false;
-	}
 }
 
 function toOrdinal(value) {
